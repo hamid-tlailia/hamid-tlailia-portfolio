@@ -46,6 +46,7 @@ const projects = [
     description:
       "A bilingual game hub that brings Ludo, Tic-Tac-Toe, Memory, Dots & Boxes, and Mahjong into one polished experience. Play locally or invite friends to a private room.",
     stack: ["HTML", "JavaScript", "PWA", "Multiplayer"],
+    demo: "https://hamid-tlailia.github.io/Majlis/index.htm",
     github: "https://github.com/hamid-tlailia/Majlis",
   },
   {
@@ -55,6 +56,7 @@ const projects = [
     description:
       "An Arabic-first companion for exploring questions with Quran and Hadith references, clear context, and transparent source checks.",
     stack: ["HTML", "JavaScript", "PWA", "APIs"],
+    demo: "https://hamid-tlailia.github.io/Mishkat",
     github: "https://github.com/hamid-tlailia/Mishkat",
   },
   {
