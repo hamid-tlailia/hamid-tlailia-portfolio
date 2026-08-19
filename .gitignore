@@ -1,0 +1,19 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Production build
+/build
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+
+# Logs and editor files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+.vscode/
