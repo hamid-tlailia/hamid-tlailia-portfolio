@@ -40,6 +40,24 @@ const projects = [
     featured: true,
   },
   {
+    title: "Majlis",
+    type: "Offline & online board-game hub",
+    art: "majlis",
+    description:
+      "A bilingual game hub that brings Ludo, Tic-Tac-Toe, Memory, Dots & Boxes, and Mahjong into one polished experience. Play locally or invite friends to a private room.",
+    stack: ["HTML", "JavaScript", "PWA", "Multiplayer"],
+    github: "https://github.com/hamid-tlailia/Majlis",
+  },
+  {
+    title: "Mishkat",
+    type: "Arabic AI faith companion",
+    art: "mishkat",
+    description:
+      "An Arabic-first companion for exploring questions with Quran and Hadith references, clear context, and transparent source checks.",
+    stack: ["HTML", "JavaScript", "PWA", "APIs"],
+    github: "https://github.com/hamid-tlailia/Mishkat",
+  },
+  {
     title: "E-commerce Website",
     type: "Full-stack commerce experience",
     image: "https://hamid-tlailia.github.io/Portfolio/images/e-commerce2.PNG",
@@ -114,6 +132,9 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [theme, setTheme] = useState(
+    () => window.localStorage.getItem("portfolio-theme") || "light"
+  );
 
   useEffect(() => {
     document.title = "Hamid Tlailia — Full-stack Developer";
@@ -121,6 +142,11 @@ function App() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem("portfolio-theme", theme);
+  }, [theme]);
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -143,6 +169,15 @@ function App() {
           <span className="brand-mark">H.</span>
           <span>Hamid Tlailia</span>
         </a>
+        <button
+          className={`theme-toggle ${theme === "dark" ? "is-dark" : ""}`}
+          type="button"
+          onClick={() => setTheme((current) => (current === "dark" ? "light" : "dark"))}
+          aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+        >
+          <span className="theme-toggle-track" aria-hidden="true"><span /></span>
+          <span>{theme === "dark" ? "Night" : "Light"}</span>
+        </button>
         <button
           className="menu-toggle"
           type="button"
@@ -234,7 +269,17 @@ function App() {
           <div className="work-grid">
             {projects.slice(3).map((project) => (
               <article className="work-card reveal" key={project.title}>
-                <div className="work-image"><img src={project.image} alt={project.alt} loading="lazy" /></div>
+                <div className={`work-image ${project.art ? `art-${project.art}` : ""}`}>
+                  {project.art ? (
+                    <div className="project-art" aria-hidden="true">
+                      <span>{project.art === "majlis" ? "المجلس" : "مشكاة"}</span>
+                      <strong>{project.art === "majlis" ? "Play together" : "A clearer path to answers"}</strong>
+                      <i>{project.art === "majlis" ? "5 games · online & offline" : "Quran · Hadith · context"}</i>
+                    </div>
+                  ) : (
+                    <img src={project.image} alt={project.alt} loading="lazy" />
+                  )}
+                </div>
                 <div className="work-card-content">
                   <p className="project-type">{project.type}</p>
                   <h3>{project.title}</h3>
@@ -273,10 +318,12 @@ function App() {
         </section>
 
         <section id="about" className="about-section section-wrap">
+          <div className="about-intro reveal">
+            <p className="eyebrow"><span /> A little more</p>
+            <h2>Technical craft, practical business thinking.</h2>
+          </div>
           <div className="about-grid">
             <div className="about-copy reveal">
-              <p className="eyebrow"><span /> A little more</p>
-              <h2>Technical craft, practical business thinking.</h2>
               <p>
                 I&apos;m a Tunisian full-stack developer based in Doha. My background combines web development with marketing, helping me turn requirements into digital experiences that are both useful and approachable.
               </p>
