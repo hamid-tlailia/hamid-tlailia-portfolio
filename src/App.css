@@ -64,7 +64,10 @@ img { display: block; max-width: 100%; }
 .theme-toggle.is-dark { border-color: rgba(76,226,206,.42); background: rgba(76,226,206,.08); }
 .theme-toggle.is-dark .theme-sun { transform: rotate(65deg) scale(.45); opacity: 0; }
 .theme-toggle.is-dark .theme-moon { transform: rotate(0deg) scale(1); opacity: 1; }
-.menu-toggle { display: none; width: 2.6rem; height: 2.6rem; padding: .6rem; background: transparent; }
+.menu-toggle { display: none; width: 2.65rem; height: 2.65rem; padding: .55rem; border: 1px solid var(--line); border-radius: 50%; background: transparent; transition: transform .18s var(--ease), border-color .18s var(--ease), background .18s var(--ease); }
+.menu-toggle:hover { border-color: var(--aqua-dark); background: rgba(22,212,189,.08); transform: translateY(-2px); }
+.menu-toggle:focus-visible { outline: 3px solid var(--aqua); outline-offset: 3px; }
+[data-theme="dark"] .menu-toggle { border-color: rgba(76,226,206,.42); background: rgba(76,226,206,.08); }
 .menu-toggle span { display: block; width: 100%; height: 2px; margin: .34rem 0; background: var(--ink); }
 
 .hero { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; min-height: min(790px, 100svh); padding-top: clamp(8.75rem, 15vw, 12rem); padding-bottom: 4rem; align-items: center; gap: clamp(2.75rem, 8vw, 8rem); }
@@ -213,7 +216,8 @@ h1 em { font-family: "Playfair Display", Georgia, serif; font-weight: 600; color
   .section-wrap, .site-header { width: min(100% - 2rem, 1180px); }
   .site-header { margin-top: .55rem; padding: .65rem .7rem .65rem .85rem; }
   .menu-toggle { display: block; }
-  .theme-toggle { width: 2.45rem; height: 2.45rem; margin-left: auto; margin-right: .35rem; }
+  .theme-toggle, .menu-toggle { width: 2.45rem; height: 2.45rem; }
+  .theme-toggle { margin-left: auto; margin-right: .35rem; }
   .site-nav { position: absolute; top: calc(100% + .55rem); right: 0; left: 0; display: grid; gap: .2rem; padding: .6rem; border-radius: .7rem; background: var(--paper); box-shadow: 0 16px 35px rgba(8,35,59,.15); opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity .18s var(--ease), transform .18s var(--ease); }
   .site-nav.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
   .site-nav > a { padding: .85rem; }
