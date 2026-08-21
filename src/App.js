@@ -46,7 +46,7 @@ const projects = [
     description:
       "A bilingual game hub that brings Ludo, Tic-Tac-Toe, Memory, Dots & Boxes, and Mahjong into one polished experience. Play locally or invite friends to a private room.",
     stack: ["HTML", "JavaScript", "PWA", "Multiplayer"],
-    demo: "https://hamid-tlailia.github.io/Majlis/index.htm",
+    demo: "https://hamid-tlailia.github.io/Majlis/index.html",
     github: "https://github.com/hamid-tlailia/Majlis",
   },
   {
@@ -160,7 +160,7 @@ function App() {
     const message = form.get("message")?.trim();
     const subject = encodeURIComponent(`Portfolio enquiry from ${name || "a visitor"}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:tlailia757@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:tlhamid18@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -353,8 +353,8 @@ function App() {
             <h2>Let&apos;s make your next idea work beautifully.</h2>
             <p>Tell me about your project, timeline, or problem to solve. I&apos;ll get back to you as soon as possible.</p>
             <div className="direct-links">
-              <a href="mailto:tlailia757@gmail.com">tlailia757@gmail.com <ArrowIcon /></a>
-              <a href="https://wa.me/97450445182" target="_blank" rel="noreferrer">WhatsApp <ArrowIcon /></a>
+              <a href="mailto:tlhamid18@gmail.com">tlhamid18@gmail.com <ArrowIcon /></a>
+              <a href="https://wa.me/97471009494" target="_blank" rel="noreferrer">WhatsApp <ArrowIcon /></a>
               <a href="https://github.com/hamid-tlailia" target="_blank" rel="noreferrer">GitHub <ArrowIcon /></a>
             </div>
           </div>
