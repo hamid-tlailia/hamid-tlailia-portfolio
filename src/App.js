@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
+import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
 import "./App.css";
 import portrait from "./images/owner-logo.png";
 import gameLogo from "./images/gameLogo.png";
@@ -177,8 +179,10 @@ function App() {
           onClick={() => setTheme((current) => (current === "dark" ? "light" : "dark"))}
           aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
         >
-          <span className="theme-toggle-track" aria-hidden="true"><span /></span>
-          <span>{theme === "dark" ? "Night" : "Light"}</span>
+          <span className="theme-icons" aria-hidden="true">
+            <LightModeRoundedIcon className="theme-icon theme-sun" />
+            <DarkModeRoundedIcon className="theme-icon theme-moon" />
+          </span>
         </button>
         <button
           className="menu-toggle"
