@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import emailjs from "emailjs-com";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
 import "./App.css";
@@ -88,7 +89,7 @@ const projects = [
     description:
       "A complete commerce experience that balances straightforward browsing with practical, user-friendly design.",
     stack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    github: "https://github.com/hamid-tlailia/Shop.git",
+    github: "https://github.com/hamid-tlailia/Shop",
   },
   {
     title: "University Website",
@@ -154,13 +155,18 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showBackTop, setShowBackTop] = useState(false);
+  const [formStatus, setFormStatus] = useState("idle");
   const [theme, setTheme] = useState(
     () => window.localStorage.getItem("portfolio-theme") || "light"
   );
 
   useEffect(() => {
     document.title = "Hamid Tlailia — Full-stack Developer";
-    const onScroll = () => setIsScrolled(window.scrollY > 18);
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 18);
+      setShowBackTop(window.scrollY > 600);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -172,15 +178,35 @@ function App() {
 
   const closeMenu = () => setMenuOpen(false);
 
-  const openMail = (event) => {
-    event.preventDefault();
-    const form = new FormData(event.currentTarget);
+  const sendViaMailto = (form) => {
     const name = form.get("name")?.trim();
     const email = form.get("email")?.trim();
     const message = form.get("message")?.trim();
     const subject = encodeURIComponent(`Portfolio enquiry from ${name || "a visitor"}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
     window.location.href = `mailto:tlhamid18@gmail.com?subject=${subject}&body=${body}`;
+  };
+
+  const sendMessage = (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const { REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID, REACT_APP_EMAILJS_PUBLIC_KEY } = process.env;
+
+    if (!REACT_APP_EMAILJS_SERVICE_ID || !REACT_APP_EMAILJS_TEMPLATE_ID || !REACT_APP_EMAILJS_PUBLIC_KEY) {
+      sendViaMailto(new FormData(form));
+      return;
+    }
+
+    setFormStatus("sending");
+    emailjs
+      .sendForm(REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID, form, REACT_APP_EMAILJS_PUBLIC_KEY)
+      .then(
+        () => {
+          setFormStatus("success");
+          form.reset();
+        },
+        () => setFormStatus("error")
+      );
   };
 
   return (
@@ -372,7 +398,7 @@ function App() {
               <a href="https://github.com/hamid-tlailia" target="_blank" rel="noreferrer">GitHub <ArrowIcon /></a>
             </div>
           </div>
-          <form className="contact-form reveal reveal-delay" onSubmit={openMail}>
+          <form className="contact-form reveal reveal-delay" onSubmit={sendMessage}>
             <label>
               Your name
               <input name="name" type="text" autoComplete="name" placeholder="How should I call you?" required />
@@ -385,8 +411,14 @@ function App() {
               What can I help with?
               <textarea name="message" rows="5" placeholder="A short description of your idea, goal, or project…" required />
             </label>
-            <button className="button button-primary" type="submit">Write an email <ArrowIcon /></button>
-            <p className="form-note">This opens your email application with your message ready to send.</p>
+            <button className="button button-primary" type="submit" disabled={formStatus === "sending"}>
+              {formStatus === "sending" ? "Sending…" : "Send message"} <ArrowIcon />
+            </button>
+            <p className={`form-note ${formStatus === "error" ? "is-error" : ""}`} aria-live="polite">
+              {formStatus === "success" && "Thanks — your message is on its way. I'll reply soon."}
+              {formStatus === "error" && "Something went wrong. Please email me directly instead."}
+              {(formStatus === "idle" || formStatus === "sending") && "Sent securely — I'll reply to the email address you provide."}
+            </p>
           </form>
         </section>
       </main>
@@ -394,8 +426,17 @@ function App() {
       <footer className="site-footer section-wrap">
         <a className="brand" href="#top"><span className="brand-mark">H.</span><span>Hamid Tlailia</span></a>
         <p>© {new Date().getFullYear()} Hamid Tlailia. Built with purpose.</p>
-        <a href="#top" className="back-top">Back to top ↑</a>
       </footer>
+
+      <a
+        href="#top"
+        className={`back-to-top ${showBackTop ? "is-visible" : ""}`}
+        aria-label="Back to top"
+        aria-hidden={!showBackTop}
+        tabIndex={showBackTop ? 0 : -1}
+      >
+        ↑
+      </a>
     </div>
   );
 }
