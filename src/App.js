@@ -143,6 +143,7 @@ const services = [
 
 const skills = [
   ["Frontend engineering", "HTML, CSS, JavaScript, React"],
+  ["Mobile development", "React Native, Expo"],
   ["Backend foundations", "Node.js, Express, MongoDB, PHP, MySQL"],
   ["Product delivery", "Responsive UI, API integration, deployment"],
 ];
@@ -252,7 +253,7 @@ function App() {
             <p className="eyebrow"><span /> Full-stack developer · Doha, Qatar</p>
             <h1>Digital products that feel <em>clear</em> from the first click.</h1>
             <p className="hero-intro">
-              I&apos;m Hamid Tlailia, a full-stack developer with 5+ years of experience building responsive websites and practical web applications.
+              I&apos;m Hamid Tlailia, a full-stack developer with 5+ years of experience building responsive websites and practical web and mobile applications with React Native and Expo.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">Explore selected work <ArrowIcon /></a>
@@ -370,7 +371,7 @@ function App() {
                 I&apos;m a Tunisian full-stack developer based in Doha. My background combines web development with marketing, helping me turn requirements into digital experiences that are both useful and approachable.
               </p>
               <p>
-                Whether you need a responsive website, a product interface, or a dependable feature for an existing system, I focus on a clean process, clear communication, and thoughtful execution.
+                Whether you need a responsive website, a React Native mobile app, or a dependable feature for an existing system, I focus on a clean process, clear communication, and thoughtful execution.
               </p>
               <a className="text-link" href="https://www.linkedin.com/in/hamid-tlailia-5a944a261" target="_blank" rel="noreferrer">Connect on LinkedIn <ArrowIcon /></a>
             </div>
