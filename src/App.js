@@ -89,7 +89,7 @@ const projects = [
     description:
       "A complete commerce experience that balances straightforward browsing with practical, user-friendly design.",
     stack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    github: "https://github.com/hamid-tlailia/Shop.git",
+    github: "https://github.com/hamid-tlailia/Shop",
   },
   {
     title: "University Website",
