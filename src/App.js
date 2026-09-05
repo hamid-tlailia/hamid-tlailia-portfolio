@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
+import FileDownloadRoundedIcon from "@mui/icons-material/FileDownloadRounded";
 import "./App.css";
 import portrait from "./images/owner-logo.png";
 import gameLogo from "./images/gameLogo.png";
@@ -264,9 +265,14 @@ function App() {
             <div className="portrait-frame">
               <div className="portrait-glow" />
               <img src={portrait} alt="Hamid Tlailia" />
-              <div className="portrait-note">
-                <span className="status-dot" />
-                Available for selected projects
+              <div className="portrait-badges">
+                <div className="portrait-note">
+                  <span className="status-dot" />
+                  Available for selected projects
+                </div>
+                <a className="cv-download" href={`${process.env.PUBLIC_URL}/Hamid-Tlailia-CV.pdf`} download="Hamid-Tlailia-CV.pdf">
+                  <FileDownloadRoundedIcon fontSize="inherit" /> CV
+                </a>
               </div>
             </div>
             <div className="orbit orbit-one" />
@@ -383,7 +389,7 @@ function App() {
                   <div><h3>{title}</h3><p>{detail}</p></div>
                 </div>
               ))}
-              <div className="education-note"><strong>Background</strong><span>Bachelor&apos;s degree in Marketing · Training in web development, IT, and soft skills</span></div>
+              <div className="education-note"><strong>Background</strong><span>Degree in Computer Programming, MUST University (2017–2019) · Bachelor&apos;s degree in Marketing · Training in web development, IT, and soft skills</span></div>
             </div>
           </div>
         </section>
