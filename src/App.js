@@ -38,13 +38,16 @@ const projects = [
     description:
       "A polished MERN messaging interface designed for fast, dependable, real-time conversations and future AI workflows.",
     stack: ["MongoDB", "Express", "React", "Socket.IO"],
-    demo: "https://hamidos-chat-frontend.onrender.com",
+    demo: "https://hamidos-chat-frontend.vercel.app",
     featured: true,
   },
   {
     title: "Majlis",
     type: "Offline & online board-game hub",
     art: "majlis",
+    artLabel: "المجلس",
+    artHeadline: "Play together",
+    artTag: "5 games · online & offline",
     description:
       "A bilingual game hub that brings Ludo, Tic-Tac-Toe, Memory, Dots & Boxes, and Mahjong into one polished experience. Play locally or invite friends to a private room.",
     stack: ["HTML", "JavaScript", "PWA", "Multiplayer"],
@@ -55,6 +58,9 @@ const projects = [
     title: "Mishkat",
     type: "Arabic AI faith companion",
     art: "mishkat",
+    artLabel: "مشكاة",
+    artHeadline: "A clearer path to answers",
+    artTag: "Quran · Hadith · context",
     description:
       "An Arabic-first companion for exploring questions with Quran and Hadith references, clear context, and transparent source checks.",
     stack: ["HTML", "JavaScript", "PWA", "APIs"],
@@ -64,8 +70,10 @@ const projects = [
   {
     title: "E-commerce Website",
     type: "Full-stack commerce experience",
-    image: "https://hamid-tlailia.github.io/Portfolio/images/e-commerce2.PNG",
-    alt: "E-commerce website preview",
+    art: "ecommerce",
+    artLabel: "المتجر",
+    artHeadline: "Shop with ease",
+    artTag: "Catalog · Cart · Checkout",
     description:
       "A complete commerce experience that balances straightforward browsing with practical, user-friendly design.",
     stack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
@@ -74,23 +82,26 @@ const projects = [
   {
     title: "University Website",
     type: "Administrative web platform",
-    image: "https://hamid-tlailia.github.io/Portfolio/images/fsjegj.PNG",
-    alt: "University website preview",
+    art: "university",
+    artLabel: "الجامعة",
+    artHeadline: "Campus, simplified",
+    artTag: "Students · Staff · Admin",
     description:
       "A university system focused on administrative workflows, student engagement, and clearer communication.",
     stack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     github: "https://github.com/hamid-tlailia/Portfolio",
   },
   {
-    title: "Science Portal",
-    type: "Interactive learning website",
-    image: "https://hamid-tlailia.github.io/Portfolio/images/science.PNG",
-    alt: "Science portal preview",
+    title: "Coco Love",
+    type: "Mobile order-management app",
+    art: "coco",
+    artLabel: "كوكو لوف",
+    artHeadline: "Orders, simplified",
+    artTag: "WhatsApp AI · Barcode · Orders",
     description:
-      "An interactive portal using approachable visual design to make complex scientific concepts easier to explore.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/hamid-tlailia/Portfolio/tree/main/projects/4Science",
-    demo: "https://hamid-tlailia.github.io/Portfolio/projects/4Science/4s.html",
+      "A cross-platform order manager for small businesses, with an AI Smart Seller that turns WhatsApp, Instagram, and TikTok messages into ready-to-approve orders.",
+    stack: ["React Native", "Expo", "Node.js", "Express", "PostgreSQL"],
+    github: "https://github.com/hamid-tlailia/Coucou-Toi",
   },
 ];
 
@@ -278,9 +289,9 @@ function App() {
                 <div className={`work-image ${project.art ? `art-${project.art}` : ""}`}>
                   {project.art ? (
                     <div className="project-art" aria-hidden="true">
-                      <span>{project.art === "majlis" ? "المجلس" : "مشكاة"}</span>
-                      <strong>{project.art === "majlis" ? "Play together" : "A clearer path to answers"}</strong>
-                      <i>{project.art === "majlis" ? "5 games · online & offline" : "Quran · Hadith · context"}</i>
+                      <span>{project.artLabel}</span>
+                      <strong>{project.artHeadline}</strong>
+                      <i>{project.artTag}</i>
                     </div>
                   ) : (
                     <img src={project.image} alt={project.alt} loading="lazy" />
