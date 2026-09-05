@@ -92,12 +92,15 @@ h1 em { font-family: "Playfair Display", Georgia, serif; font-weight: 600; color
 .text-link:hover span, .compact-links a:hover span { transform: translateX(4px); }
 
 .hero-visual { position: relative; justify-self: center; width: min(100%, 390px); }
-.portrait-frame { position: relative; height: 445px; isolation: isolate; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; border-radius: 12rem 12rem 1.5rem 1.5rem; background: linear-gradient(150deg, #a4e6df 0%, #8ac5ca 49%, #4c7f92 100%); box-shadow: 18px 18px 0 var(--navy); }
+.portrait-frame { position: relative; height: 445px; isolation: isolate; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 12rem 12rem 1.5rem 1.5rem; background: linear-gradient(150deg, #a4e6df 0%, #8ac5ca 49%, #4c7f92 100%); box-shadow: 18px 18px 0 var(--navy); }
 .portrait-frame::after { content: ""; position: absolute; z-index: -1; inset: 14% -20% -23%; border-radius: 50%; background: var(--orange); opacity: .85; }
 .portrait-glow { position: absolute; z-index: -1; top: 10%; left: 10%; width: 5rem; height: 5rem; border-radius: 50%; background: var(--aqua); filter: blur(12px); }
-.portrait-frame img { position: relative; z-index: 1; width: 92%; height: 94%; object-fit: contain; object-position: bottom center; }
-.portrait-note { position: absolute; z-index: 3; bottom: 1rem; left: 1rem; display: flex; align-items: center; gap: .5rem; padding: .6rem .75rem; border: 1px solid rgba(255,255,255,.55); border-radius: .4rem; background: rgba(8,35,59,.83); color: white; backdrop-filter: blur(9px); font-family: "DM Mono", monospace; font-size: .57rem; letter-spacing: .03em; }
+.portrait-frame img { position: relative; z-index: 1; width: 94%; height: 95%; object-fit: cover; object-position: center 15%; border-radius: 10.5rem 10.5rem .9rem .9rem; }
+.portrait-badges { position: absolute; z-index: 3; bottom: 1rem; left: 1rem; right: 1rem; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.portrait-note { display: flex; align-items: center; gap: .5rem; padding: .6rem .75rem; border: 1px solid rgba(255,255,255,.55); border-radius: .4rem; background: rgba(8,35,59,.83); color: white; backdrop-filter: blur(9px); font-family: "DM Mono", monospace; font-size: .57rem; letter-spacing: .03em; }
 .status-dot { width: .48rem; height: .48rem; border-radius: 50%; background: var(--aqua); box-shadow: 0 0 0 .22rem rgba(22,212,189,.18); }
+.cv-download { display: inline-flex; align-items: center; gap: .3rem; padding: .6rem .75rem; border-radius: .4rem; background: linear-gradient(135deg, var(--aqua), var(--aqua-dark)); color: var(--navy); font-family: "DM Mono", monospace; font-size: .57rem; font-weight: 800; letter-spacing: .03em; box-shadow: 3px 3px 0 var(--navy); transition: transform .16s var(--ease), box-shadow .16s var(--ease); }
+.cv-download:hover { transform: translateY(-2px); box-shadow: 5px 5px 0 var(--navy); }
 .orbit { position: absolute; z-index: -2; border: 1px solid rgba(8,35,59,.18); border-radius: 50%; }
 .orbit-one { width: 118%; height: 84%; top: 2rem; left: -9%; transform: rotate(25deg); }
 .orbit-two { width: 89%; height: 112%; left: 7%; top: -5%; transform: rotate(-32deg); border-color: rgba(255,122,61,.48); }
