@@ -181,7 +181,9 @@ h1 em { font-family: "Playfair Display", Georgia, serif; font-weight: 600; color
 [data-theme="dark"] .contact-form input, [data-theme="dark"] .contact-form textarea { border-bottom-color: rgba(247,251,253,.36); }
 [data-theme="dark"] .contact-form input:focus, [data-theme="dark"] .contact-form textarea:focus { border-bottom-color: var(--aqua); }
 .contact-form .button { justify-self: start; margin-top: .6rem; }
+.contact-form .button:disabled { opacity: .65; cursor: not-allowed; }
 .form-note { margin: 0; color: var(--ink-soft); font-size: .63rem; line-height: 1.6; }
+.form-note.is-error { color: #d9522f; }
 
 .site-footer { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding-block: 2rem; border-top: 1px solid var(--line); }
 .site-footer p { margin: 0; color: var(--ink-soft); font-size: .68rem; }
