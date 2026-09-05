@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="QR code reader and generator illustration">
+  <defs>
+    <linearGradient id="qrBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f14"/>
+      <stop offset="54%" stop-color="#12333b"/>
+      <stop offset="100%" stop-color="#1fb6c9"/>
+    </linearGradient>
+    <linearGradient id="qrCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e3f7fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#qrBg)"/>
+  <circle cx="656" cy="86" r="146" fill="#7cf1ff" opacity="0.18"/>
+  <circle cx="100" cy="500" r="86" fill="#ffffff" opacity="0.08"/>
+  <ellipse cx="400" cy="470" rx="185" ry="26" fill="#050a0d" opacity="0.35"/>
+  <rect x="230" y="150" width="340" height="290" rx="46" fill="url(#qrCard)"/>
+  <g fill="#0a0f14">
+    <rect x="330" y="230" width="46" height="46" rx="6"/>
+    <rect x="424" y="230" width="46" height="46" rx="6"/>
+    <rect x="330" y="324" width="46" height="46" rx="6"/>
+    <rect x="342" y="242" width="22" height="22" rx="3" fill="#e3f7fa"/>
+    <rect x="436" y="242" width="22" height="22" rx="3" fill="#e3f7fa"/>
+    <rect x="342" y="336" width="22" height="22" rx="3" fill="#e3f7fa"/>
+    <rect x="392" y="230" width="16" height="16" rx="3"/>
+    <rect x="392" y="254" width="16" height="16" rx="3"/>
+    <rect x="424" y="286" width="16" height="16" rx="3"/>
+    <rect x="392" y="300" width="16" height="16" rx="3"/>
+    <rect x="424" y="330" width="46" height="16" rx="3"/>
+    <rect x="392" y="346" width="16" height="24" rx="3"/>
+  </g>
+  <path d="M300 208 V236 M300 208 H328" fill="none" stroke="#1fb6c9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M500 208 V236 M500 208 H472" fill="none" stroke="#1fb6c9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M300 392 V364 M300 392 H328" fill="none" stroke="#1fb6c9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M500 392 V364 M500 392 H472" fill="none" stroke="#1fb6c9" stroke-width="10" stroke-linecap="round"/>
+</svg>

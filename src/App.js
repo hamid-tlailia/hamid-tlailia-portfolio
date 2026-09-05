@@ -6,6 +6,12 @@ import portrait from "./images/owner-logo.png";
 import gameLogo from "./images/gameLogo.png";
 import deenAllah from "./images/deen_aalah.png";
 import chatAi from "./images/chat-ai.png";
+import majlisArt from "./images/art-majlis.svg";
+import mishkatArt from "./images/art-mishkat.svg";
+import ecommerceArt from "./images/art-ecommerce.svg";
+import universityArt from "./images/art-university.svg";
+import cocoArt from "./images/art-coco.svg";
+import qrArt from "./images/art-qr.svg";
 
 const projects = [
   {
@@ -44,10 +50,8 @@ const projects = [
   {
     title: "Majlis",
     type: "Offline & online board-game hub",
-    art: "majlis",
-    artLabel: "المجلس",
-    artHeadline: "Play together",
-    artTag: "5 games · online & offline",
+    image: majlisArt,
+    alt: "Majlis board-game hub illustration",
     description:
       "A bilingual game hub that brings Ludo, Tic-Tac-Toe, Memory, Dots & Boxes, and Mahjong into one polished experience. Play locally or invite friends to a private room.",
     stack: ["HTML", "JavaScript", "PWA", "Multiplayer"],
@@ -57,10 +61,8 @@ const projects = [
   {
     title: "Mishkat",
     type: "Arabic AI faith companion",
-    art: "mishkat",
-    artLabel: "مشكاة",
-    artHeadline: "A clearer path to answers",
-    artTag: "Quran · Hadith · context",
+    image: mishkatArt,
+    alt: "Mishkat faith companion illustration",
     description:
       "An Arabic-first companion for exploring questions with Quran and Hadith references, clear context, and transparent source checks.",
     stack: ["HTML", "JavaScript", "PWA", "APIs"],
@@ -68,12 +70,21 @@ const projects = [
     github: "https://github.com/hamid-tlailia/Mishkat",
   },
   {
+    title: "QR Code Reader",
+    type: "Camera-based QR scanner & generator",
+    image: qrArt,
+    alt: "QR code reader and generator illustration",
+    description:
+      "Scan, read, and generate QR codes right in the browser, with camera flip, torch control, and full offline support.",
+    stack: ["HTML", "CSS", "JavaScript", "PWA"],
+    demo: "https://hamid-tlailia.github.io/QR/qr.html",
+    github: "https://github.com/hamid-tlailia/QR",
+  },
+  {
     title: "E-commerce Website",
     type: "Full-stack commerce experience",
-    art: "ecommerce",
-    artLabel: "المتجر",
-    artHeadline: "Shop with ease",
-    artTag: "Catalog · Cart · Checkout",
+    image: ecommerceArt,
+    alt: "E-commerce website illustration",
     description:
       "A complete commerce experience that balances straightforward browsing with practical, user-friendly design.",
     stack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
@@ -82,10 +93,8 @@ const projects = [
   {
     title: "University Website",
     type: "Administrative web platform",
-    art: "university",
-    artLabel: "الجامعة",
-    artHeadline: "Campus, simplified",
-    artTag: "Students · Staff · Admin",
+    image: universityArt,
+    alt: "University website illustration",
     description:
       "A university system focused on administrative workflows, student engagement, and clearer communication.",
     stack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
@@ -94,10 +103,8 @@ const projects = [
   {
     title: "Coco Love",
     type: "Mobile order-management app",
-    art: "coco",
-    artLabel: "كوكو لوف",
-    artHeadline: "Orders, simplified",
-    artTag: "WhatsApp AI · Barcode · Orders",
+    image: cocoArt,
+    alt: "Coco Love order-management app illustration",
     description:
       "A cross-platform order manager for small businesses, with an AI Smart Seller that turns WhatsApp, Instagram, and TikTok messages into ready-to-approve orders.",
     stack: ["React Native", "Expo", "Node.js", "Express", "PostgreSQL"],
@@ -286,16 +293,8 @@ function App() {
           <div className="work-grid">
             {projects.slice(3).map((project) => (
               <article className="work-card reveal" key={project.title}>
-                <div className={`work-image ${project.art ? `art-${project.art}` : ""}`}>
-                  {project.art ? (
-                    <div className="project-art" aria-hidden="true">
-                      <span>{project.artLabel}</span>
-                      <strong>{project.artHeadline}</strong>
-                      <i>{project.artTag}</i>
-                    </div>
-                  ) : (
-                    <img src={project.image} alt={project.alt} loading="lazy" />
-                  )}
+                <div className="work-image">
+                  <img src={project.image} alt={project.alt} loading="lazy" />
                 </div>
                 <div className="work-card-content">
                   <p className="project-type">{project.type}</p>

@@ -132,19 +132,6 @@ h1 em { font-family: "Playfair Display", Georgia, serif; font-weight: 600; color
 [data-theme="dark"] .work-image { background: #0b1e31; }
 .work-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s var(--ease); }
 .work-card:hover .work-image img { transform: scale(1.04); }
-.project-art { position: relative; display: flex; height: 100%; padding: 1.2rem; flex-direction: column; align-items: flex-start; justify-content: flex-end; overflow: hidden; color: #fffaf0; }
-.project-art::before, .project-art::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
-.project-art::before { width: 13rem; height: 13rem; right: -4rem; top: -5rem; border: 1px solid currentColor; opacity: .32; }
-.project-art::after { width: 6rem; height: 6rem; left: -1.8rem; bottom: -3rem; border: 1px solid currentColor; opacity: .24; }
-.project-art span, .project-art strong, .project-art i { position: relative; z-index: 1; }
-.project-art span { margin-bottom: .35rem; font-family: "Playfair Display", serif; font-size: 1.75rem; font-weight: 700; }
-.project-art strong { max-width: 11ch; margin-bottom: .7rem; font-size: 1.05rem; letter-spacing: -.04em; }
-.project-art i { font-family: "DM Mono", monospace; font-size: .53rem; font-style: normal; letter-spacing: .03em; opacity: .82; }
-.work-image.art-majlis { background: radial-gradient(circle at 85% 15%, rgba(255, 210, 115, .24), transparent 33%), linear-gradient(135deg, #2c130f, #71331e 54%, #be7040); }
-.work-image.art-mishkat { background: radial-gradient(circle at 82% 10%, rgba(107, 242, 207, .26), transparent 34%), linear-gradient(135deg, #0b3a42, #126d65 52%, #48a486); }
-.work-image.art-ecommerce { background: radial-gradient(circle at 85% 15%, rgba(255, 214, 244, .24), transparent 33%), linear-gradient(135deg, #26123f, #5b2a86 54%, #a15fd1); }
-.work-image.art-university { background: radial-gradient(circle at 82% 10%, rgba(255, 214, 120, .26), transparent 34%), linear-gradient(135deg, #0d1b3a, #1f3d73 52%, #3f6bb0); }
-.work-image.art-coco { background: radial-gradient(circle at 85% 15%, rgba(255, 200, 220, .26), transparent 33%), linear-gradient(135deg, #3a0d20, #91264f 54%, #d9527d); }
 .work-card-content { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 1.5rem; }
 .work-card h3 { font-size: 1.45rem; }
 .work-card-content > p:not(.project-type) { min-height: 4.8em; color: var(--ink-soft); font-size: .79rem; line-height: 1.7; }
