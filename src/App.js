@@ -154,13 +154,17 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showBackTop, setShowBackTop] = useState(false);
   const [theme, setTheme] = useState(
     () => window.localStorage.getItem("portfolio-theme") || "light"
   );
 
   useEffect(() => {
     document.title = "Hamid Tlailia — Full-stack Developer";
-    const onScroll = () => setIsScrolled(window.scrollY > 18);
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 18);
+      setShowBackTop(window.scrollY > 600);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -394,8 +398,17 @@ function App() {
       <footer className="site-footer section-wrap">
         <a className="brand" href="#top"><span className="brand-mark">H.</span><span>Hamid Tlailia</span></a>
         <p>© {new Date().getFullYear()} Hamid Tlailia. Built with purpose.</p>
-        <a href="#top" className="back-top">Back to top ↑</a>
       </footer>
+
+      <a
+        href="#top"
+        className={`back-to-top ${showBackTop ? "is-visible" : ""}`}
+        aria-label="Back to top"
+        aria-hidden={!showBackTop}
+        tabIndex={showBackTop ? 0 : -1}
+      >
+        ↑
+      </a>
     </div>
   );
 }
