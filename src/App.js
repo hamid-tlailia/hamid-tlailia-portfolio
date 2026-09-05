@@ -6,6 +6,12 @@ import portrait from "./images/owner-logo.png";
 import gameLogo from "./images/gameLogo.png";
 import deenAllah from "./images/deen_aalah.png";
 import chatAi from "./images/chat-ai.png";
+import majlisArt from "./images/art-majlis.svg";
+import mishkatArt from "./images/art-mishkat.svg";
+import ecommerceArt from "./images/art-ecommerce.svg";
+import universityArt from "./images/art-university.svg";
+import cocoArt from "./images/art-coco.svg";
+import qrArt from "./images/art-qr.svg";
 
 const projects = [
   {
@@ -38,13 +44,14 @@ const projects = [
     description:
       "A polished MERN messaging interface designed for fast, dependable, real-time conversations and future AI workflows.",
     stack: ["MongoDB", "Express", "React", "Socket.IO"],
-    demo: "https://hamidos-chat-frontend.onrender.com",
+    demo: "https://hamidos-chat-frontend.vercel.app",
     featured: true,
   },
   {
     title: "Majlis",
     type: "Offline & online board-game hub",
-    art: "majlis",
+    image: majlisArt,
+    alt: "Majlis board-game hub illustration",
     description:
       "A bilingual game hub that brings Ludo, Tic-Tac-Toe, Memory, Dots & Boxes, and Mahjong into one polished experience. Play locally or invite friends to a private room.",
     stack: ["HTML", "JavaScript", "PWA", "Multiplayer"],
@@ -54,7 +61,8 @@ const projects = [
   {
     title: "Mishkat",
     type: "Arabic AI faith companion",
-    art: "mishkat",
+    image: mishkatArt,
+    alt: "Mishkat faith companion illustration",
     description:
       "An Arabic-first companion for exploring questions with Quran and Hadith references, clear context, and transparent source checks.",
     stack: ["HTML", "JavaScript", "PWA", "APIs"],
@@ -62,10 +70,21 @@ const projects = [
     github: "https://github.com/hamid-tlailia/Mishkat",
   },
   {
+    title: "QR Code Reader",
+    type: "Camera-based QR scanner & generator",
+    image: qrArt,
+    alt: "QR code reader and generator illustration",
+    description:
+      "Scan, read, and generate QR codes right in the browser, with camera flip, torch control, and full offline support.",
+    stack: ["HTML", "CSS", "JavaScript", "PWA"],
+    demo: "https://hamid-tlailia.github.io/QR/qr.html",
+    github: "https://github.com/hamid-tlailia/QR",
+  },
+  {
     title: "E-commerce Website",
     type: "Full-stack commerce experience",
-    image: "https://hamid-tlailia.github.io/Portfolio/images/e-commerce2.PNG",
-    alt: "E-commerce website preview",
+    image: ecommerceArt,
+    alt: "E-commerce website illustration",
     description:
       "A complete commerce experience that balances straightforward browsing with practical, user-friendly design.",
     stack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
@@ -74,23 +93,22 @@ const projects = [
   {
     title: "University Website",
     type: "Administrative web platform",
-    image: "https://hamid-tlailia.github.io/Portfolio/images/fsjegj.PNG",
-    alt: "University website preview",
+    image: universityArt,
+    alt: "University website illustration",
     description:
       "A university system focused on administrative workflows, student engagement, and clearer communication.",
     stack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     github: "https://github.com/hamid-tlailia/Portfolio",
   },
   {
-    title: "Science Portal",
-    type: "Interactive learning website",
-    image: "https://hamid-tlailia.github.io/Portfolio/images/science.PNG",
-    alt: "Science portal preview",
+    title: "Coco Love",
+    type: "Mobile order-management app",
+    image: cocoArt,
+    alt: "Coco Love order-management app illustration",
     description:
-      "An interactive portal using approachable visual design to make complex scientific concepts easier to explore.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/hamid-tlailia/Portfolio/tree/main/projects/4Science",
-    demo: "https://hamid-tlailia.github.io/Portfolio/projects/4Science/4s.html",
+      "A cross-platform order manager for small businesses, with an AI Smart Seller that turns WhatsApp, Instagram, and TikTok messages into ready-to-approve orders.",
+    stack: ["React Native", "Expo", "Node.js", "Express", "PostgreSQL"],
+    github: "https://github.com/hamid-tlailia/Coucou-Toi",
   },
 ];
 
@@ -275,16 +293,8 @@ function App() {
           <div className="work-grid">
             {projects.slice(3).map((project) => (
               <article className="work-card reveal" key={project.title}>
-                <div className={`work-image ${project.art ? `art-${project.art}` : ""}`}>
-                  {project.art ? (
-                    <div className="project-art" aria-hidden="true">
-                      <span>{project.art === "majlis" ? "المجلس" : "مشكاة"}</span>
-                      <strong>{project.art === "majlis" ? "Play together" : "A clearer path to answers"}</strong>
-                      <i>{project.art === "majlis" ? "5 games · online & offline" : "Quran · Hadith · context"}</i>
-                    </div>
-                  ) : (
-                    <img src={project.image} alt={project.alt} loading="lazy" />
-                  )}
+                <div className="work-image">
+                  <img src={project.image} alt={project.alt} loading="lazy" />
                 </div>
                 <div className="work-card-content">
                   <p className="project-type">{project.type}</p>

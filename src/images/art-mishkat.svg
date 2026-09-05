@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Mishkat faith companion illustration">
+  <defs>
+    <linearGradient id="mishkatBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b3a42"/>
+      <stop offset="52%" stop-color="#126d65"/>
+      <stop offset="100%" stop-color="#48a486"/>
+    </linearGradient>
+    <linearGradient id="mishkatCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4fffb"/>
+      <stop offset="100%" stop-color="#dff4ec"/>
+    </linearGradient>
+    <radialGradient id="mishkatGlow" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#ffe9a8"/>
+      <stop offset="100%" stop-color="#ffcf6b"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#mishkatBg)"/>
+  <circle cx="656" cy="80" r="140" fill="#6bf2cf" opacity="0.18"/>
+  <circle cx="100" cy="500" r="86" fill="#ffffff" opacity="0.08"/>
+  <ellipse cx="400" cy="470" rx="185" ry="26" fill="#04211f" opacity="0.35"/>
+  <rect x="230" y="150" width="340" height="290" rx="46" fill="url(#mishkatCard)"/>
+  <path d="M400 190 C332 190 292 236 292 292 L292 372 L508 372 L508 292 C508 236 468 190 400 190 Z" fill="#0b3a42"/>
+  <path d="M400 240 C374 240 358 262 358 288 C358 320 400 350 400 350 C400 350 442 320 442 288 C442 262 426 240 400 240 Z" fill="url(#mishkatGlow)"/>
+  <rect x="322" y="372" width="156" height="18" rx="9" fill="#0b3a42"/>
+</svg>

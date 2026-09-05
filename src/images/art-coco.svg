@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Coco Love order-management app illustration">
+  <defs>
+    <linearGradient id="cocoBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a0d20"/>
+      <stop offset="54%" stop-color="#91264f"/>
+      <stop offset="100%" stop-color="#d9527d"/>
+    </linearGradient>
+    <linearGradient id="cocoCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff5f8"/>
+      <stop offset="100%" stop-color="#fbe1ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#cocoBg)"/>
+  <circle cx="656" cy="86" r="146" fill="#ffc8dc" opacity="0.2"/>
+  <circle cx="100" cy="500" r="86" fill="#ffffff" opacity="0.08"/>
+  <ellipse cx="400" cy="470" rx="185" ry="26" fill="#280714" opacity="0.35"/>
+  <rect x="230" y="150" width="340" height="290" rx="46" fill="url(#cocoCard)"/>
+  <rect x="350" y="200" width="100" height="180" rx="20" fill="#3a0d20"/>
+  <rect x="360" y="220" width="80" height="130" rx="8" fill="#fff5f8"/>
+  <path d="M400 330 C384 316 368 304 368 288 C368 276 376 268 388 268 C394 268 400 272 400 278 C400 272 406 268 412 268 C424 268 432 276 432 288 C432 304 416 316 400 330 Z" fill="#d9527d"/>
+  <circle cx="470" cy="230" r="34" fill="#d9527d"/>
+  <path d="M448 244 L436 262 L458 254 Z" fill="#d9527d"/>
+  <path d="M456 222 L484 222 M456 232 L478 232 M456 242 L470 242" stroke="#fff5f8" stroke-width="5" stroke-linecap="round"/>
+</svg>

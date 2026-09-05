@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Majlis board-game hub illustration">
+  <defs>
+    <linearGradient id="majlisBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2c130f"/>
+      <stop offset="54%" stop-color="#71331e"/>
+      <stop offset="100%" stop-color="#be7040"/>
+    </linearGradient>
+    <linearGradient id="majlisCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fffaf0"/>
+      <stop offset="100%" stop-color="#f4e9d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#majlisBg)"/>
+  <circle cx="660" cy="90" r="150" fill="#ffd273" opacity="0.16"/>
+  <circle cx="90" cy="520" r="90" fill="#ffffff" opacity="0.08"/>
+  <ellipse cx="400" cy="470" rx="185" ry="26" fill="#1a0a06" opacity="0.35"/>
+  <rect x="230" y="150" width="340" height="290" rx="46" fill="url(#majlisCard)"/>
+  <circle cx="400" cy="228" r="46" fill="#d9522f"/>
+  <circle cx="322" cy="322" r="46" fill="#2f7a5a"/>
+  <circle cx="478" cy="322" r="46" fill="#2d6ca8"/>
+  <rect x="366" y="278" width="68" height="68" rx="16" fill="#fffaf0" stroke="#2c130f" stroke-width="4"/>
+  <circle cx="384" cy="296" r="6" fill="#2c130f"/>
+  <circle cx="416" cy="296" r="6" fill="#2c130f"/>
+  <circle cx="400" cy="312" r="6" fill="#2c130f"/>
+  <circle cx="384" cy="328" r="6" fill="#2c130f"/>
+  <circle cx="416" cy="328" r="6" fill="#2c130f"/>
+</svg>

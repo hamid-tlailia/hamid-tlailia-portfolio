@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="University website illustration">
+  <defs>
+    <linearGradient id="uniBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1b3a"/>
+      <stop offset="52%" stop-color="#1f3d73"/>
+      <stop offset="100%" stop-color="#3f6bb0"/>
+    </linearGradient>
+    <linearGradient id="uniCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8eefb"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#uniBg)"/>
+  <circle cx="656" cy="86" r="146" fill="#ffd678" opacity="0.18"/>
+  <circle cx="100" cy="500" r="86" fill="#ffffff" opacity="0.08"/>
+  <ellipse cx="400" cy="470" rx="185" ry="26" fill="#060f24" opacity="0.35"/>
+  <rect x="230" y="150" width="340" height="290" rx="46" fill="url(#uniCard)"/>
+  <rect x="330" y="300" width="140" height="70" rx="8" fill="#1f3d73"/>
+  <rect x="342" y="270" width="116" height="30" rx="6" fill="#3f6bb0"/>
+  <path d="M400 218 L500 258 L400 298 L300 258 Z" fill="#0d1b3a"/>
+  <path d="M462 262 V304 C462 314 434 322 400 322 C366 322 338 314 338 304 V262" fill="none" stroke="#0d1b3a" stroke-width="8" stroke-linecap="round"/>
+  <line x1="500" y1="258" x2="500" y2="312" stroke="#ffd678" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="500" cy="322" r="8" fill="#ffd678"/>
+</svg>

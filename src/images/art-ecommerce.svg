@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="E-commerce website illustration">
+  <defs>
+    <linearGradient id="shopBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#26123f"/>
+      <stop offset="54%" stop-color="#5b2a86"/>
+      <stop offset="100%" stop-color="#a15fd1"/>
+    </linearGradient>
+    <linearGradient id="shopCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1e8fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#shopBg)"/>
+  <circle cx="656" cy="86" r="146" fill="#ffd6f4" opacity="0.16"/>
+  <circle cx="100" cy="500" r="86" fill="#ffffff" opacity="0.08"/>
+  <ellipse cx="400" cy="470" rx="185" ry="26" fill="#1b0c2c" opacity="0.35"/>
+  <rect x="230" y="150" width="340" height="290" rx="46" fill="url(#shopCard)"/>
+  <path d="M340 258 L340 236 C340 210 366 190 400 190 C434 190 460 210 460 236 L460 258" fill="none" stroke="#5b2a86" stroke-width="16" stroke-linecap="round"/>
+  <path d="M318 258 H482 L468 372 C466 386 454 396 440 396 H360 C346 396 334 386 332 372 Z" fill="#a15fd1"/>
+  <path d="M318 258 H482 L472 330 H328 Z" fill="#7c3fb0"/>
+  <circle cx="472" cy="356" r="30" fill="#ffcf3f"/>
+  <path d="M460 356 L470 366 L486 346" fill="none" stroke="#5b2a86" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
