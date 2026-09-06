@@ -83,14 +83,15 @@ const projects = [
     github: "https://github.com/hamid-tlailia/QR",
   },
   {
-    title: "E-commerce Website",
-    type: "Full-stack commerce experience",
+    title: "HamidosShop",
+    type: "Bilingual e-commerce storefront",
     image: ecommerceArt,
-    alt: "E-commerce website illustration",
+    alt: "HamidosShop e-commerce storefront illustration",
     description:
-      "A complete commerce experience that balances straightforward browsing with practical, user-friendly design.",
-    stack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    github: "https://github.com/hamid-tlailia/Shop",
+      "A modern e-commerce storefront with full English/Arabic support and RTL layout, a filterable product catalog, cart, and a multi-step checkout with country-aware local and international payment options.",
+    stack: ["React", "TypeScript", "Material UI", "Vite"],
+    demo: "https://aurorashop-pi.vercel.app",
+    github: "https://github.com/hamid-tlailia/E-comerce",
   },
   {
     title: "University Website",
