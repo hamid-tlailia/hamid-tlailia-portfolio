@@ -7,7 +7,7 @@ import "./App.css";
 import portrait from "./images/owner-logo.png";
 import gameLogo from "./images/gameLogo.png";
 import deenAllah from "./images/deen_aalah.png";
-import chatAi from "./images/chat-ai.png";
+import chatArt from "./images/art-chat.svg";
 import majlisArt from "./images/art-majlis.svg";
 import mishkatArt from "./images/art-mishkat.svg";
 import ecommerceArt from "./images/art-ecommerce.svg";
@@ -54,8 +54,8 @@ const projects = [
   {
     title: "Modern Chat App",
     type: "AI-ready messaging experience",
-    image: chatAi,
-    alt: "Modern Chat App preview",
+    image: chatArt,
+    alt: "Modern Chat App illustration",
     description:
       "A polished MERN messaging interface designed for fast, dependable, real-time conversations and future AI workflows.",
     stack: ["MongoDB", "Express", "React", "Socket.IO"],

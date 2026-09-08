@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Modern Chat App illustration">
+  <defs>
+    <linearGradient id="chatBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1f3d"/>
+      <stop offset="54%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="chatCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e7eefc"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#chatBg)"/>
+  <circle cx="656" cy="86" r="146" fill="#bfdbfe" opacity="0.22"/>
+  <circle cx="100" cy="500" r="86" fill="#ffffff" opacity="0.08"/>
+  <ellipse cx="400" cy="470" rx="185" ry="26" fill="#04102a" opacity="0.32"/>
+  <rect x="230" y="150" width="340" height="290" rx="46" fill="url(#chatCard)"/>
+  <path d="M330 236 C330 216 346 200 366 200 L466 200 C486 200 502 216 502 236 L502 296 C502 316 486 332 466 332 L400 332 L364 360 L368 332 L366 332 C346 332 330 316 330 296 Z" fill="#1d4ed8"/>
+  <circle cx="382" cy="266" r="10" fill="#ffffff"/>
+  <circle cx="416" cy="266" r="10" fill="#ffffff"/>
+  <circle cx="450" cy="266" r="10" fill="#ffffff"/>
+  <path d="M296 360 C296 348 305 338 317 338 L358 338 C370 338 379 348 379 360 L379 384 C379 396 370 406 358 406 L336 406 L316 420 L318 406 L317 406 C305 406 296 396 296 384 Z" fill="#93c5fd"/>
+</svg>
