@@ -14,8 +14,21 @@ import ecommerceArt from "./images/art-ecommerce.svg";
 import universityArt from "./images/art-university.svg";
 import cocoArt from "./images/art-coco.svg";
 import qrArt from "./images/art-qr.svg";
+import tadabburArt from "./images/art-tadabbur.svg";
 
 const projects = [
+  {
+    title: "Tadabbur",
+    type: "Quran memorization built on learning science",
+    image: tadabburArt,
+    alt: "Tadabbur Quran memorization app illustration",
+    description:
+      "An Arabic-first memorization companion that pairs spaced repetition with active recall: every ayah is drilled through recognition, cued recall and free recall, then scheduled by SM-2. A daily review cap keeps the backlog from becoming a wall, and recitation can be checked by voice or handed to a listener to grade. Works fully offline, with no account and nothing leaving the device.",
+    stack: ["JavaScript", "PWA", "Web Speech API", "Canvas"],
+    demo: "https://tadabbur-quran-phi.vercel.app",
+    github: "https://github.com/hamid-tlailia/Contemplating",
+    featured: true,
+  },
   {
     title: "Hamidos Gaming",
     type: "Real-time multiplayer hub",
