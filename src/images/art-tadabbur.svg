@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Tadabbur Quran memorization app illustration">
+  <defs>
+    <linearGradient id="tadabburBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c3a30"/>
+      <stop offset="52%" stop-color="#1f6f5c"/>
+      <stop offset="100%" stop-color="#3fae91"/>
+    </linearGradient>
+    <linearGradient id="tadabburCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbf7ec"/>
+      <stop offset="100%" stop-color="#efe7d5"/>
+    </linearGradient>
+    <linearGradient id="tadabburGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8c78a"/>
+      <stop offset="100%" stop-color="#b98b2a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#tadabburBg)"/>
+  <circle cx="672" cy="86" r="150" fill="#7ff0d2" opacity="0.16"/>
+  <circle cx="96" cy="508" r="92" fill="#ffffff" opacity="0.08"/>
+
+  <!-- eight-point star tiling, the app's own background motif -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="2">
+    <path d="M90 120 L104 148 L134 148 L112 168 L122 198 L90 180 L58 198 L68 168 L46 148 L76 148 Z"/>
+    <path d="M686 268 L700 296 L730 296 L708 316 L718 346 L686 328 L654 346 L664 316 L642 296 L672 296 Z"/>
+    <path d="M118 268 L132 296 L162 296 L140 316 L150 346 L118 328 L86 346 L96 316 L74 296 L104 296 Z"/>
+  </g>
+
+  <ellipse cx="400" cy="486" rx="196" ry="26" fill="#04211c" opacity="0.34"/>
+
+  <!-- the ayah panel: a page with blanks, which is the app in one picture -->
+  <rect x="212" y="120" width="376" height="330" rx="34" fill="url(#tadabburCard)"/>
+  <rect x="228" y="136" width="344" height="298" rx="24" fill="none" stroke="#b98b2a" stroke-opacity="0.55" stroke-width="2"/>
+  <g stroke="url(#tadabburGold)" stroke-width="7" fill="none" stroke-linecap="square">
+    <path d="M492 158 L536 158 L536 202"/>
+    <path d="M308 412 L264 412 L264 368"/>
+  </g>
+
+  <!-- open book watermark behind the text, as in the app's own panel -->
+  <g fill="none" stroke="#b98b2a" stroke-opacity="0.20" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="400" cy="285" r="112"/>
+    <path d="M400 246c-19-16-48-20-75-16v106c27-4 56 0 75 16 19-16 48-20 75-16V230c-27-4-56 0-75 16Z"/>
+    <path d="M400 246v106"/>
+  </g>
+
+  <!-- revealed words, ruled blanks, and the one word being asked for -->
+  <g fill="#2b2620" opacity="0.82">
+    <rect x="404" y="196" width="128" height="15" rx="7"/>
+    <rect x="330" y="196" width="60" height="15" rx="7"/>
+  </g>
+  <rect x="252" y="188" width="64" height="32" rx="8" fill="#b98b2a" opacity="0.30"/>
+  <rect x="252" y="216" width="64" height="5" rx="2" fill="#b98b2a"/>
+
+  <g fill="#2b2620" opacity="0.28">
+    <rect x="440" y="266" width="92" height="7" rx="3"/>
+    <rect x="330" y="266" width="94" height="7" rx="3"/>
+    <rect x="268" y="266" width="46" height="7" rx="3"/>
+    <rect x="404" y="326" width="128" height="7" rx="3"/>
+    <rect x="300" y="326" width="88" height="7" rx="3"/>
+    <rect x="356" y="386" width="122" height="7" rx="3"/>
+  </g>
+
+  <!-- three rounds to mastery -->
+  <g>
+    <circle cx="368" cy="424" r="8" fill="#1f6f5c"/>
+    <circle cx="400" cy="424" r="8" fill="#1f6f5c"/>
+    <circle cx="432" cy="424" r="8" fill="#2b2620" opacity="0.18"/>
+  </g>
+
+  <!-- spaced repetition: the same ayah returning over widening intervals -->
+  <g fill="none" stroke="#ffe9a8" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10">
+    <path d="M244 528 H556"/>
+  </g>
+  <g fill="#ffe9a8" opacity="0.92">
+    <circle cx="244" cy="528" r="7"/>
+    <circle cx="276" cy="528" r="7"/>
+    <circle cx="340" cy="528" r="7"/>
+    <circle cx="436" cy="528" r="7"/>
+    <circle cx="556" cy="528" r="7"/>
+  </g>
+
+  <!-- ornament -->
+  <g transform="translate(400 96)" fill="none" stroke="#ffe9a8" stroke-opacity="0.85" stroke-width="3">
+    <path d="M0 -18 L13 -13 L18 0 L13 13 L0 18 L-13 13 L-18 0 L-13 -13 Z"/>
+    <circle cx="0" cy="0" r="5"/>
+  </g>
+</svg>
