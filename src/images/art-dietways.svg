@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Diet Ways smart diet and fasting app illustration">
+  <defs>
+    <linearGradient id="dwBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070b1d"/>
+      <stop offset="55%" stop-color="#241a55"/>
+      <stop offset="100%" stop-color="#5b3fb0"/>
+    </linearGradient>
+    <linearGradient id="dwFlame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c26b"/>
+      <stop offset="100%" stop-color="#8b7bff"/>
+    </linearGradient>
+    <linearGradient id="dwRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="50%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#dwBg)"/>
+  <circle cx="660" cy="92" r="160" fill="#8b7bff" opacity="0.18"/>
+  <circle cx="96" cy="520" r="96" fill="#f5c26b" opacity="0.10"/>
+  <g fill="#ffffff" opacity="0.5">
+    <circle cx="120" cy="110" r="2.5"/><circle cx="210" cy="70" r="1.8"/><circle cx="700" cy="420" r="2.2"/><circle cx="610" cy="520" r="1.6"/><circle cx="84" cy="300" r="1.6"/>
+  </g>
+
+  <ellipse cx="400" cy="496" rx="190" ry="24" fill="#02040c" opacity="0.45"/>
+
+  <!-- the fasting ring: track, 16:8 progress and stage markers -->
+  <circle cx="400" cy="280" r="170" fill="#0d1230"/>
+  <circle cx="400" cy="280" r="138" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="22"/>
+  <circle cx="400" cy="280" r="138" fill="none" stroke="url(#dwRing)" stroke-width="22" stroke-linecap="round" stroke-dasharray="727 867" transform="rotate(-90 400 280)"/>
+  <g stroke="#ffffff" stroke-opacity="0.18" stroke-width="3" stroke-linecap="round">
+    <path d="M400 162v12M400 386v12M282 280h12M506 280h12"/>
+  </g>
+  <circle cx="538" cy="280" r="17" fill="#facc15"/>
+  <circle cx="400" cy="418" r="17" fill="#84cc16"/>
+  <circle cx="302" cy="378" r="17" fill="#22c55e"/>
+  <circle cx="498" cy="182" r="17" fill="#f97316"/>
+  <circle cx="302" cy="182" r="17" fill="#0d1230" stroke="#8b7bff" stroke-width="4"/>
+
+  <!-- brand flame at the centre -->
+  <path d="M400 196c26 34 44 52 44 82a44 44 0 1 1-88 0c0-18 9-32 18-45 4 13 9 18 18 22 0-21 0-40 8-59z" fill="url(#dwFlame)"/>
+  <rect x="352" y="344" width="96" height="14" rx="7" fill="#ffffff" opacity="0.85"/>
+  <rect x="372" y="366" width="56" height="10" rx="5" fill="#f97316" opacity="0.9"/>
+
+  <!-- meal card: AI plan + scan -->
+  <g transform="translate(560 330)">
+    <rect width="176" height="118" rx="22" fill="#fffaf2"/>
+    <circle cx="36" cy="38" r="18" fill="#bbf7d0"/>
+    <path d="M28 40c4-10 12-12 16-6-2 8-10 10-16 6z" fill="#16a34a"/>
+    <rect x="64" y="28" width="90" height="10" rx="5" fill="#1c1917" opacity="0.8"/>
+    <rect x="64" y="44" width="60" height="8" rx="4" fill="#1c1917" opacity="0.3"/>
+    <rect x="18" y="74" width="140" height="10" rx="5" fill="#e7e5e4"/>
+    <rect x="18" y="74" width="62" height="10" rx="5" fill="#3b82f6"/>
+    <rect x="80" y="74" width="44" height="10" fill="#f59e0b"/>
+    <rect x="124" y="74" width="34" height="10" rx="5" fill="#ec4899"/>
+    <rect x="18" y="94" width="48" height="10" rx="5" fill="#22c55e" opacity="0.8"/>
+  </g>
+
+  <!-- water card -->
+  <g transform="translate(64 150)">
+    <rect width="160" height="96" rx="22" fill="#fffaf2"/>
+    <path d="M34 24c10 13 16 20 16 29a16 16 0 1 1-32 0c0-9 6-16 16-29z" fill="#0ea5e9"/>
+    <g fill="#0ea5e9">
+      <rect x="66" y="30" width="12" height="18" rx="4"/><rect x="84" y="30" width="12" height="18" rx="4"/><rect x="102" y="30" width="12" height="18" rx="4"/>
+    </g>
+    <g fill="#e0f2fe"><rect x="120" y="30" width="12" height="18" rx="4"/></g>
+    <rect x="66" y="60" width="66" height="10" rx="5" fill="#1c1917" opacity="0.3"/>
+  </g>
+
+  <!-- coach sparkle -->
+  <g transform="translate(120 400)" fill="#f5c26b">
+    <path d="M28 0l7 21 21 7-21 7-7 21-7-21-21-7 21-7z"/>
+    <path d="M70 34l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" opacity="0.7"/>
+  </g>
+</svg>
