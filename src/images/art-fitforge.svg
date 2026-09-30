@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="FitForge fitness tracking app illustration">
+  <defs>
+    <linearGradient id="ffBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0d12"/>
+      <stop offset="55%" stop-color="#3a1c12"/>
+      <stop offset="100%" stop-color="#0e5261"/>
+    </linearGradient>
+    <linearGradient id="ffBrand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f84f14"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="ffCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#171b24"/>
+      <stop offset="100%" stop-color="#11141b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#ffBg)"/>
+  <circle cx="680" cy="90" r="160" fill="#22d3ee" opacity="0.14"/>
+  <circle cx="90" cy="520" r="100" fill="#f84f14" opacity="0.14"/>
+
+  <ellipse cx="400" cy="498" rx="200" ry="24" fill="#000" opacity="0.4"/>
+
+  <!-- the app card -->
+  <rect x="190" y="112" width="420" height="360" rx="40" fill="url(#ffCard)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2"/>
+
+  <!-- brand dumbbell -->
+  <g transform="translate(234 150)">
+    <rect width="92" height="92" rx="24" fill="url(#ffBrand)"/>
+    <g fill="#fff">
+      <rect x="10" y="36" width="10" height="20" rx="4"/><rect x="22" y="30" width="8" height="32" rx="3"/>
+      <rect x="32" y="42" width="28" height="8" rx="4"/>
+      <rect x="62" y="30" width="8" height="32" rx="3"/><rect x="72" y="36" width="10" height="20" rx="4"/>
+    </g>
+  </g>
+  <rect x="346" y="166" width="160" height="16" rx="8" fill="#ffffff" opacity="0.88"/>
+  <rect x="346" y="194" width="110" height="12" rx="6" fill="#ffffff" opacity="0.35"/>
+  <rect x="346" y="218" width="64" height="12" rx="6" fill="#f84f14" opacity="0.9"/>
+
+  <!-- activity ring -->
+  <g transform="translate(290 360)">
+    <circle r="62" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="16"/>
+    <circle r="62" fill="none" stroke="url(#ffBrand)" stroke-width="16" stroke-linecap="round" stroke-dasharray="290 390" transform="rotate(-90)"/>
+    <path d="M-10-14l22 14-22 14z" fill="#fff"/>
+  </g>
+
+  <!-- weekly progress bars -->
+  <g transform="translate(386 300)">
+    <rect x="0" y="70" width="22" height="50" rx="8" fill="#22d3ee" opacity="0.55"/>
+    <rect x="34" y="40" width="22" height="80" rx="8" fill="#22d3ee" opacity="0.7"/>
+    <rect x="68" y="56" width="22" height="64" rx="8" fill="#22d3ee" opacity="0.6"/>
+    <rect x="102" y="16" width="22" height="104" rx="8" fill="url(#ffBrand)"/>
+    <rect x="136" y="34" width="22" height="86" rx="8" fill="#f84f14" opacity="0.8"/>
+    <rect x="0" y="130" width="158" height="4" rx="2" fill="#ffffff" opacity="0.15"/>
+  </g>
+
+  <!-- voice coaching waves -->
+  <g transform="translate(632 250)" stroke="#22d3ee" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M0 0v40"/><path d="M18 -14v68" opacity="0.8"/><path d="M36 6v28" opacity="0.6"/><path d="M54 -6v52" opacity="0.45"/>
+  </g>
+  <!-- heart-rate line -->
+  <path d="M60 330h60l18-36 22 72 20-50 14 14h56" fill="none" stroke="#f84f14" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

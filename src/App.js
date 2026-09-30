@@ -15,6 +15,8 @@ import universityArt from "./images/art-university.svg";
 import cocoArt from "./images/art-coco.svg";
 import qrArt from "./images/art-qr.svg";
 import tadabburArt from "./images/art-tadabbur.svg";
+import dietWaysArt from "./images/art-dietways.svg";
+import fitForgeArt from "./images/art-fitforge.svg";
 
 const projects = [
   {
@@ -61,6 +63,28 @@ const projects = [
     stack: ["MongoDB", "Express", "React", "Socket.IO"],
     demo: "https://hamidos-chat-frontend.vercel.app",
     featured: true,
+  },
+  {
+    title: "Diet Ways",
+    type: "Smart diet & intermittent-fasting coach",
+    image: dietWaysArt,
+    alt: "Diet Ways smart diet and fasting app illustration",
+    description:
+      "A bilingual (Arabic/English) diet companion that brings four science-backed diets together with a live fasting timer, 14 body stages, AI-generated daily meals, photo calorie scanning, weight tracking, badges, and smart push reminders that run even when the app is closed.",
+    stack: ["React", "Vite", "PWA", "Vercel Functions", "Postgres", "Web Push", "AI"],
+    demo: "https://diet-plans-latest.vercel.app",
+    github: "https://github.com/hamid-tlailia/Diet-Ways",
+  },
+  {
+    title: "FitForge",
+    type: "Fitness & health tracking platform",
+    image: fitForgeArt,
+    alt: "FitForge fitness tracking app illustration",
+    description:
+      "A bilingual fitness tracker with real accounts, voice-guided workout coaching, nutrition logging with a calorie and macro calculator, progress analytics, and subscription plans that unlock AI-powered training and nutrition plans.",
+    stack: ["React", "TypeScript", "Tailwind CSS", "Vercel Functions", "Postgres", "AI"],
+    demo: "https://fitforge-app-sandy.vercel.app",
+    github: "https://github.com/hamid-tlailia/Fit-Track",
   },
   {
     title: "Majlis",
