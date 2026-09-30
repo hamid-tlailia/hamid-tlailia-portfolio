@@ -211,8 +211,29 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Sections ease in as they scroll into view (everything shows at once without IntersectionObserver).
+  useEffect(() => {
+    const items = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) {
+      items.forEach((el) => el.classList.add("is-in"));
+      return undefined;
+    }
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-in");
+          io.unobserve(e.target);
+        }
+      }),
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+    );
+    items.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#0f0e0c" : "#f7f4ef");
     window.localStorage.setItem("portfolio-theme", theme);
   }, [theme]);
 
@@ -298,6 +319,11 @@ function App() {
               <a className="button button-primary" href="#work">Explore selected work <ArrowIcon /></a>
               <a className="text-link" href="#contact">Start a project <span>→</span></a>
             </div>
+            <dl className="hero-facts">
+              <div><dt>5+</dt><dd>Years building</dd></div>
+              <div><dt>{projects.length}</dt><dd>Shipped projects</dd></div>
+              <div><dt>Web · Mobile</dt><dd>React &amp; React Native</dd></div>
+            </dl>
           </div>
           <div className="hero-visual reveal reveal-delay">
             <div className="portrait-frame">
