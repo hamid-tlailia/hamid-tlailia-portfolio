@@ -120,10 +120,10 @@ const projects = [
     github: "https://github.com/hamid-tlailia/QR",
   },
   {
-    title: "HamidosShop",
+    title: "Hamidos Shop",
     type: "Bilingual e-commerce storefront",
     image: ecommerceArt,
-    alt: "HamidosShop e-commerce storefront illustration",
+    alt: "Hamidos Shop e-commerce storefront illustration",
     description:
       "A modern e-commerce storefront with full English/Arabic support and RTL layout, a filterable product catalog, cart, and a multi-step checkout with country-aware local and international payment options.",
     stack: ["React", "TypeScript", "Material UI", "Vite"],
